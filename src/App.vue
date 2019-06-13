@@ -1,29 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <div class></div>
     <router-view/>
+    <i-switch v-model="switch1"/>
+    <Circle/>
+    <Table></Table>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+export default {
+  data() {
+    return {
+      switch1: false
+    };
+  },
+  mounted() {
+    console.log("看看构建版本看看构建版本看看构建版本看看构建版本看看构建版本看看构建版本看看构建版本看看构建版本看看构建版本看看构建版本看看构建版本看看构建版本看看构建版本");
+    this.$Message.info({
+      content: "Tips for manual closing",
+      duration: 10,
+      closable: true
+    });
   }
-}
+};
+</script>
+
+<style lang="scss">
 </style>
